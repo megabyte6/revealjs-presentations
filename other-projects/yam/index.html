@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div style="margin: 10px;">
+            <input type="text" id="userInput">
+            <button onclick="copyText()">Copy Text</button>
+            <!-- Using word joiners -->
+            <br style="display: block; content: ''; margin-bottom: 15px;">
+            <button onclick="copyYamWithWordJoiner()">Copy Yam with word joiners</button>
+            <!-- Using zero width spaces -->
+            <br style="display: block; content: ''; margin-bottom: 15px;">
+            <button onclick="copyYamWithZeroWidthSpace()">Copy Yam with zero width spaces</button>
+        </div>
+
+        <script>
+            const copyToClipboard = str => {
+                const tempElement = document.createElement('textarea');
+                tempElement.value = str;
+                tempElement.setAttribute('readonly', '');
+                tempElement.style.position = 'absolute';
+                tempElement.style.left = '-9999px';
+                document.body.appendChild(tempElement);
+                tempElement.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElement);
+            };
+
+            var textBox = document.getElementById("userInput");
+
+            function copyText() {
+                copyToClipboard(textBox.value);
+                alert("Copied text: " + textBox.value);
+            }
+
+            function copyYamWithWordJoiner() {
+                copyToClipboard("⁠ ⁠ ⁠ 👑\nʕ• ᴥ •ʔ");
+                alert("Copied Yam with word joiners!");
+            }
+
+            function copyYamWithZeroWidthSpace() {
+                copyToClipboard("​ ​ ​ 👑\nʕ• ᴥ •ʔ");
+                alert("Copied Yam with zero width spaces!");
+            }
+        </script>
+    </body>
+</html>
+
+
+<!-- 
+Word joiner:
+⁠ ⁠ ⁠ 👑
+ʕ• ᴥ •ʔ
+Zero width space:
+​ ​ ​ 👑
+ʕ• ᴥ •ʔ
+
+(U+2060) Word joiner
+(U+200B) Zero width space
+ -->
