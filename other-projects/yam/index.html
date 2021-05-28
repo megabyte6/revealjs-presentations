@@ -2,10 +2,12 @@
 <html>
     <body>
         <br style="display: block; content: ''; margin-bottom: 10px;">
-        <input type="text" id="userInput">
-        <button onclick="copyText()">Copy Text</button>
-        <br style="display: block; content: ''; margin-bottom: 15px;">
-        <button onclick="copyYam()">Copy Yam</button>
+        <div style="margin: 10px">
+            <input type="text" id="userInput">
+            <button onclick="copyText()">Copy Text</button>
+            <br style="display: block; content: ''; margin-bottom: 15px;">
+            <button onclick="copyYam()">Copy Yam</button>
+        </div>
 
         <script>
             const copyToClipboard = str => {
