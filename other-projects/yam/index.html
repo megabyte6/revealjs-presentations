@@ -3,6 +3,8 @@
     <body>
         <input type="text" id="userInput">
         <button onclick="copyText()">Copy Text</button>
+        <br>
+        <button onclick="copyYam()">Copy Yam</button>
 
         <script>
             const copyToClipboard = str => {
@@ -20,11 +22,11 @@
             var textBox = document.getElementById("userInput");
 
             function copyText() {
-                if (textBox.value == "") {
-                    copyToClipboard("​ ​ ​ 👑\nʕ• ᴥ •ʔ");
-                } else {
-                    copyToClipboard(textBox.value);
-                }
+                copyToClipboard(textBox.value);
+            }
+
+            function copyYam() {
+                copyToClipboard("​ ​ ​ 👑\nʕ• ᴥ •ʔ");
             }
         </script>
     </body>
