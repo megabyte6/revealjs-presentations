@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="userInput">
+        <button onclick="copyText()">Copy Text</button>
+
+        <script>
+            const copyToClipboard = str => {
+                const tempElement = document.createElement('textarea');
+                tempElement.value = str;
+                tempElement.setAttribute('readonly', '');
+                tempElement.style.position = 'absolute';
+                tempElement.style.left = '-9999px';
+                document.body.appendChild(tempElement);
+                tempElement.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempElement);
+            };
+
+            var textBox = document.getElementById("userInput");
+
+            function copyText() {
+                if (textBox.value == "") {
+                    copyToClipboard("​ ​ ​ 👑\nʕ• ᴥ •ʔ");
+                } else {
+                    copyToClipboard(textBox.value);
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+<!-- 
+​ ​ ​ 👑
+ʕ• ᴥ •ʔ
+ -->
