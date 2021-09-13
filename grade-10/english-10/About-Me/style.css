@@ -1,0 +1,15 @@
+img {
+    border-radius: 25%;
+}
+
+td.halves {
+    width: 50%;
+}
+
+td.thirds {
+    width: 33%;
+}
+
+p {
+    font-size: 14px;
+}
