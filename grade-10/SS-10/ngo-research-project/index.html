@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -6,6 +7,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../../reveal.js-4.3.1/dist/reveal.css">
     <link rel="stylesheet" href="../../../reveal.js-4.3.1/dist/theme/league.css">
+
+    <style>
+        :root {
+            --r-background-color: #2b2b2b;
+            --r-main-font: Lato, sans-serif;
+            --r-main-font-size: 40px;
+            --r-main-color: #eee;
+            --r-block-margin: 20px;
+            --r-heading-margin: 0 0 20px 0;
+            --r-heading-font: League Gothic, Impact, sans-serif;
+            --r-heading-color: #eee;
+            --r-heading-line-height: 1.2;
+            --r-heading-letter-spacing: normal;
+            --r-heading-text-transform: uppercase;
+            --r-heading-text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+            --r-heading-font-weight: normal;
+            --r-heading1-text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+            --r-heading1-size: 3.77em;
+            --r-heading2-size: 2.11em;
+            --r-heading3-size: 1.55em;
+            --r-heading4-size: 1em;
+            --r-code-font: monospace;
+            --r-link-color: #13DAEC;
+            --r-link-color-dark: #0d99a5;
+            --r-link-color-hover: #71e9f4;
+            --r-selection-background-color: #13daec;
+            --r-selection-color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,13 +46,27 @@
                 <h1 class="drop-shadow">Non-Governmental Organizations</h1>
             </section>
 
-            <section data-transition="convex-in">
-                <h2 class="drop-shadow">HIV/AIDS</h2>
-                <h4 class="drop-shadow">What is HIV/AIDS?</h4>
-                <img src="res/hiv.jpg" alt="HIV" class="drop-shadow">
+            <section data-transition="convex-in zoom-out">
+                <section>
+                    <h2 class="drop-shadow">HIV/AIDS</h2>
+                    <h4 class="drop-shadow">What is HIV/AIDS?</h4>
+                    <div style="width: fit-content; margin: auto;">
+                        <img src="res/hiv.jpg" alt="HIV" class="drop-shadow" style="float: left; height: 35vh;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="res/virus.jpg" alt="Virus" class="drop-shadow" style="float: right; height: 35vh;">
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="drop-shadow">Why is HIV/AIDS an issue?</h2>
+                    <div class="r-stack">
+                        <img src="res/male-female.png" class="fragment fade-in-then-out" style="width: 25vw;">
+                        <img src="res/prep.jpg" class="fragment fade-in-then-out" style="width: 25vw;">
+                    </div>
+                </section>
             </section>
 
-            <section data-transition="convex-in">
+            <section data-transition="zoom-in slide-out">
                 <section data-auto-animate>
                     <div style="display: grid;">
                         <div data-id="logo-banner"
@@ -32,22 +76,51 @@
                 </section>
 
                 <section data-auto-animate>
-                    <div style="display: grid;">
-                        <div data-id="logo-banner"
-                            style="height: 100px; width: fit-content; grid-row: 1; grid-column: 1;">
-                            <img src="res/IAS-primary-logo.svg">
+                    <div style="width: fit-content; margin: auto;">
+                        <div data-id="logo-banner" style="height: 100px; width: auto; float: left;">
+                            <img src="res/IAS-primary-logo.svg" style="transform: translate(0px, -20%);">
                         </div>
-                        <h2 data-id="IAS-text" style="grid-row: 1; grid-column: 2;">International AIDS Society</h2>
+                        <h2 data-id="IAS-text" style="float: right;">International AIDS Society</h2>
+                    </div>
+                    <div style="width: fit-content; margin: auto;">
+                        <ul style="float: left; margin-right: 10vw;">
+                            <li class="fragment fade-in-then-semi-out">
+                                <h4>Money</h4>
+                            </li>
+                            <li class="fragment fade-in-then-semi-out">
+                                <h4>Influence</h4>
+                            </li>
+                            <li class="fragment fade-in-then-semi-out">
+                                <h4>Assistance</h4>
+                            </li>
+                            <li class="fragment fade-in">
+                                <h4>International Help</h4>
+                            </li>
+                        </ul>
+                        <div class="r-stack" style="float: right;">
+                            <img src="res/money.jpg" class="fragment fade-in-then-out" style="width: 25vw;">
+                            <img src="res/influence.png" class="fragment fade-in-then-out" style="width: 25vw;">
+                            <img src="res/assistance.png" class="fragment fade-in-then-out" style="width: 25vw;">
+                            <img src="res/international-help.jpg" class="fragment fade-in" style="width: 25vw;">
+                        </div>
                     </div>
                 </section>
+            </section>
+
+            <section data-transition="concave-in fade-out">
+                <h2>Volunteering & Donating</h2>
+                <img src="res/volunteer.png" alt="Volunteering">
             </section>
 
         </div>
     </div>
 
     <script src="../../../reveal.js-4.3.1/dist/reveal.js"></script>
+    <script src="../../../reveal.js-4.3.1/plugin/zoom/zoom.js"></script>
     <script>
-        Reveal.initialize();
+        Reveal.initialize({
+            plugins: [RevealZoom]
+        });
     </script>
 </body>
 
