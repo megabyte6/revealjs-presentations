@@ -1,3 +1,19 @@
 h1.drop-shadow {
-    filter: drop-shadow(35px 30px 6px #2a2a2a);
+    filter: drop-shadow(30px 25px 7px #2a2a2a);
+}
+
+h2.drop-shadow, img.drop-shadow {
+    filter: drop-shadow(25px 20px 7px #2a2a2a);
+}
+
+h3.drop-shadow {
+    filter: drop-shadow(20px 15px 7px #2a2a2a);
+}
+
+h4.drop-shadow {
+    filter: drop-shadow(15px 10px 7px #2a2a2a);
+}
+
+h5.drop-shadow {
+    filter: drop-shadow(10px 5px 7px #2a2a2a);
 }
